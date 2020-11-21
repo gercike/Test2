@@ -5,15 +5,15 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 public class WorldStatistics {
-    String countriesFile = "/home/progmatic/Letöltések/orszagok.txt";
-    String citiesFile = "/home/progmatic/Letöltések/varosok.txt";
+    String countriesFile = "orszagok.txt";
+    String citiesFile = "varosok.txt";
     List<Country> countries = new ArrayList<>();
 
     public static void main(String[] args) throws FileNotFoundException {
         WorldStatistics main = new WorldStatistics();
         main.readFile(main.countriesFile, main.citiesFile);
 //        System.out.println(main.countries);
-//        System.out.println(main.countries.get(15));
+        System.out.println(main.countries.get(15).getPopulationDensity());
 //        System.out.println(main.countries.get(15).getRuralPopulation());
 //        System.out.println(main.findCountryByISoCode("AUT")); //4. feladat
 //        System.out.println(main.getCountriesOfContinent("Europe"));//5. feladat
